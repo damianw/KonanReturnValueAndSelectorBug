@@ -1,0 +1,19 @@
+apply plugin: 'konan'
+
+konan.targets = ['iphone', 'iphone_sim']
+
+konanArtifacts {
+    framework('KonanReturnValueAndSelectorBug') {
+        enableMultiplatform true
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    expectedBy project(':common')
+}
+
+task test(dependsOn: run)

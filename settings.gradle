@@ -1,0 +1,3 @@
+rootProject.name = 'KonanReturnValueAndSelectorBug'
+
+include ':common', ':jvm', ':ios'
